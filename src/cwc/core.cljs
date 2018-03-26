@@ -33,7 +33,7 @@
        [:p "Enter Your Individual Income: " [atom-input val]]
        [:p (if
             (> (js/parseInt @val) 0) (cond
-                                       (> (cwcalc (js/parseInt @val)) 0) (str "You gained $" (cwcalc (js/parseInt @val)) " in annual income to the class war.")
+                                       (> (cwcalc (js/parseInt @val)) 0) (str "You gained $" (cwcalc (js/parseInt @val)) " in annual income in the class war.")
                                       :else (str "You lost $" (* -1 (cwcalc (js/parseInt @val))) " in annual income to the class war" ))
             "Please enter an income value greater than 0.")]
        ])))
